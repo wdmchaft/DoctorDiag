@@ -20,6 +20,7 @@
 		CE5A084B134D8EF60017BA1C /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE5A084A134D8EF60017BA1C /* icon.jpg */; };
 		CECD5C7F134CCE760024EBDD /* FirstModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */; };
 		CECD5C80134CCE760024EBDD /* FirstModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */; };
+		CED65203134ED8C500353FEE /* disease-headache.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED65202134ED8C500353FEE /* disease-headache.plist */; };
 		CEE1DD21134CDDFF0032CD8E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE1DD1F134CDDFF0032CD8E /* FirstViewController.m */; };
 		CEE1DD22134CDDFF0032CD8E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE1DD20134CDDFF0032CD8E /* FirstViewController.xib */; };
 		CEE1DD2E134CDF380032CD8E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE1DD2D134CDF380032CD8E /* logo.png */; };
@@ -46,6 +47,7 @@
 		CECD5C7C134CCE760024EBDD /* FirstModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModalViewController.h; sourceTree = "<group>"; };
 		CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModalViewController.m; sourceTree = "<group>"; };
 		CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FirstModalViewController.xib; path = Classes/FirstModalViewController.xib; sourceTree = "<group>"; };
+		CED65202134ED8C500353FEE /* disease-headache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "disease-headache.plist"; sourceTree = "<group>"; };
 		CEE1DD1E134CDDFF0032CD8E /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		CEE1DD1F134CDDFF0032CD8E /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		CEE1DD20134CDDFF0032CD8E /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FirstViewController.xib; path = Classes/FirstViewController.xib; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				CE5A062C134D64990017BA1C /* disease-backache.plist */,
 				CE5A062D134D64990017BA1C /* disease-flu.plist */,
+				CED65202134ED8C500353FEE /* disease-headache.plist */,
 			);
 			name = Diseases;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				CE5A062E134D64990017BA1C /* disease-backache.plist in Resources */,
 				CE5A062F134D64990017BA1C /* disease-flu.plist in Resources */,
 				CE5A084B134D8EF60017BA1C /* icon.jpg in Resources */,
+				CED65203134ED8C500353FEE /* disease-headache.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

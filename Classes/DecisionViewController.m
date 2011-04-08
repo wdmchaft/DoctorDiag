@@ -51,9 +51,13 @@
 }
 
 - (void)getDataFromSource {
+	
 	NSBundle *bundle = [NSBundle mainBundle];
-	NSString *plistPath = [bundle pathForResource:@"disease-flu" ofType:@"plist"];
-  self.datasource = [[NSArray alloc] initWithContentsOfFile:plistPath];	
+
+	NSString *plistPath = [bundle pathForResource:self.listFile ofType:@"plist"];
+  
+	self.datasource = [[NSArray alloc] initWithContentsOfFile:plistPath];	
+	
 }
 
 - (NSString *)_getNodeId:(NSDictionary *)node {
@@ -66,6 +70,18 @@
 
 - (NSString *)_getNoNodeTitleFromNode:(NSDictionary *)node {
 	return [node valueForKey:@"no"];
+}
+
+- (NSString *)pickUpPlist:(NSIndexPath *)indexPath {
+ 	
+	/*NSArray *arrayOfResource = [[NSBundle mainBundle] pathsForResourcesOfType:@".plist" inDirectory:@"/Resources"];
+	 NSLog(@"Array %@",arrayOfResource);
+	 */
+	
+	NSArray *arrayOfPlist = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", nil];
+	
+	return [arrayOfPlist objectAtIndex:indexPath.row];
+	
 }
 
 - (void)_traverseToNodeName:(NSString *)nodeTitle {

@@ -152,11 +152,12 @@
 }
 */
 
-- (NSString *)pickUpPlist:(NSIndexPath *)indexPath{
- 	//NSArray *arrayOfResource = [[NSBundle mainBundle] pathsForResourcesOfType:@".plist" inDirectory:@"Resources"];
-	//NSLog(@"Array %@",arrayOfResource);
-	return @"";
+- (NSString *)listFileNameFromIndex:(NSIndexPath *)indexPath {
+	NSArray *arrayOfFile = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", @"disease-headache", nil];
+	
+	return [arrayOfFile objectAtIndex:indexPath.row];
 }
+
 
 
 #pragma mark -
@@ -166,7 +167,9 @@
 	
 	DecisionViewController *decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	
-	//[self pickUpPlist:indexPath];
+	decisionView.listFile = [[self listFileNameFromIndex:indexPath] copy];
+	
+	NSLog(@"listFile %@", decisionView.listFile);
 	
 	[decisionView.parentNodeLabel setText:[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
 	

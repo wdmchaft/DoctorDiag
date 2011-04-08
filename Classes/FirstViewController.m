@@ -38,7 +38,7 @@
 	
 	self.modalView = [[FirstModalViewController alloc] initWithNibName:@"FirstModalViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	
-	self.modalView.listItem = [NSArray arrayWithObjects:@"ปวดหลัง", @"ไข้", nil];
+	self.modalView.listItem = [NSArray arrayWithObjects:@"ปวดหลัง", @"ไข้", @"ปวดหัว", nil];
 	
 	/*
 	UIView *currentView = self.view;
