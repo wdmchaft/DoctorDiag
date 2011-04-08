@@ -40,7 +40,7 @@
 	
 	self.modalView.listItem = [NSArray arrayWithObjects:@"ปวดหลัง", @"ไข้", nil];
 	
-	/*
+	
 	UIView *currentView = self.view;
 	
 	UIView *window = [currentView superview];
@@ -55,9 +55,9 @@
 	
 	[[window layer] addAnimation:animation forKey:@"Switch Modal View"];
 
-	*/
 	
-	[self.navigationController presentModalViewController:modalView animated:YES];
+	/*
+	[self.navigationController presentModalViewController:modalView animated:YES]; */
 	
 }
 

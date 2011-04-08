@@ -32,12 +32,11 @@
 - (IBAction)back:(id)sender {
 	UIView *currentView = [self view];
 
-	/*
 	FirstViewController *firstView = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 
 	[currentView.superview addSubview:firstView.view];	
 	[self.view removeFromSuperview];
-	*/
+
 }
 
 - (void)viewDidLoad {
