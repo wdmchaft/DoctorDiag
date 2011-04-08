@@ -2,7 +2,7 @@
 {
 	1D3623240D0F684500981E51 /* DoctorDiagAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {789, 533}}";
+			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
 			sepNavSelRange = "{374, 0}";
 			sepNavVisRange = "{0, 502}";
 			sepNavWindowFrame = "{{15, 80}, {559, 693}}";
@@ -218,7 +218,7 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {789, 533}}";
+			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 356}";
 		};
@@ -242,16 +242,16 @@
 	};
 	CE421E51134CEE9B00E822F7 /* DecisionViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {789, 650}}";
+			sepNavIntBoundsRect = "{{0, 0}, {693, 650}}";
 			sepNavSelRange = "{956, 0}";
-			sepNavVisRange = "{144, 978}";
+			sepNavVisRange = "{141, 981}";
 		};
 	};
 	CE421E52134CEE9B00E822F7 /* DecisionViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 2093}}";
-			sepNavSelRange = "{1727, 0}";
-			sepNavVisRange = "{886, 1270}";
+			sepNavIntBoundsRect = "{{0, 0}, {439, 2288}}";
+			sepNavSelRange = "{2103, 0}";
+			sepNavVisRange = "{1658, 244}";
 			sepNavWindowFrame = "{{18, 141}, {672, 637}}";
 		};
 	};
@@ -271,6 +271,11 @@
 		name = doctorViewController.m;
 		path = /Users/user/Desktop/doctor/Classes/doctorViewController.m;
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {693, 1833}}";
+			sepNavSelRange = "{1192, 190}";
+			sepNavVisRange = "{1001, 1602}";
+		};
 	};
 	CE5A0813134D8B6E0017BA1C /* DecisionViewController.m:124 */ = {
 		isa = PBXFileBreakpoint;
@@ -456,7 +461,7 @@
 	};
 	CECD5C7C134CCE760024EBDD /* FirstModalViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {789, 510}}";
+			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
 			sepNavSelRange = "{493, 0}";
 			sepNavVisRange = "{0, 562}";
 		};
@@ -1819,16 +1824,16 @@
 	};
 	CEE1DD1E134CDDFF0032CD8E /* FirstViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {813, 533}}";
+			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
 			sepNavSelRange = "{257, 0}";
 			sepNavVisRange = "{0, 496}";
 		};
 	};
 	CEE1DD1F134CDDFF0032CD8E /* FirstViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 1209}}";
+			sepNavIntBoundsRect = "{{0, 0}, {693, 1196}}";
 			sepNavSelRange = "{1188, 0}";
-			sepNavVisRange = "{663, 1203}";
+			sepNavVisRange = "{663, 1206}";
 			sepNavWindowFrame = "{{15, 81}, {1045, 692}}";
 		};
 	};

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>node</key>
+		<string>D0</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดหัว</string>
+		<key>yes</key>
+		<string>D1</string>
+		<key>no</key>
+		<string>D2</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D1</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีอาการอย่างใดอย่างหนึ่งดังต่อไปนี้ มีอาการอย่างใดอย่างหนึ่งดังต่อไปนี้ 
+- ปวดรุนแรง 
+- เห็นภาพซ้อน 
+- ตามืดมัวลงเรื่อย ๆ ติดต่อกัน (เป็นวันหรือเป็นสัปดาห์) 
+- เดินเซหรือแขนขาอ่อนแรง 
+- รูม่านตา 2 ข้างไม่เท่ากัน</string>
+		<key>yes</key>
+		<string>D2</string>
+		<key>no</key>
+		<string>D3</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D2</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีประวัติได้รับบาดเจ็บที่ศีรษะภายใน 7 วันที่ผ่านมา</string>
+		<key>yes</key>
+		<string>D4</string>
+		<key>no</key>
+		<string>D5</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D3</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดตุบ ๆ ที่ขมับข้างเดียวหรือ 2 ข้าง</string>
+		<key>yes</key>
+		<string>D6</string>
+		<key>no</key>
+		<string>D8</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D4</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ศีรษะได้รับบาดเจ็บ/เลือดออกในสมอง 
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D5</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>คอแข็ง</string>
+		<key>yes</key>
+		<string>D6</string>
+		<key>no</key>
+		<string>D7</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D6</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>เยื่อหุ้มสมองอักเสบ (Meningiti
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D7</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ควรไปพบแพทย์ด่วน 
+อาจมีสาเหตุอื่น ๆ เช่น เนื้องอกในสมอง/หลอดเลือดสมองแตก/เลือดออกในสมอง ฯลฯ</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D8</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ไมเกรน (Migraine)
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D9</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดหลังจากอ่านหนังสือ หรือใช้สายตามาก</string>
+		<key>yes</key>
+		<string>D10</string>
+		<key>no</key>
+		<string>D12</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D10</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>สายตาไม่ดี</string>
+		<key>yes</key>
+		<string>D12</string>
+		<key>no</key>
+		<string>D13</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D11</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>คิดมาก, นอนไม่หลับ หรือคร่ำเคร่งกับงาน</string>
+		<key>yes</key>
+		<string>D14</string>
+		<key>no</key>
+		<string>D15</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D12</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>สายตาผิดปกติ/ตาเข (Refractive
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D13</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>- ยาแก้ปวด 
+- ยาคลายกล้ามเนื้อ 
+- หลีกเลี่ยงการนอนที่นอนนุ่ม 
+- ปรับท่านั่ง/ยืน/ยกของให้ถูกต้อง 
+ถ้าไม่ดีขึ้นใน 1 สัปดาห์ ควรไปพบแพทย์</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D14</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ปวดศีรษะจากความเครียด (Tension
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D15</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>- ยาแก้ปวด 
+- ยาไดอะซีแพม ถ้าเครียด 
+- นวดต้นคอ หรือขมับ หรือทานวดด้วยยาหม่อง 
+- นอนพักในห้องมืด ๆ เงียบ ๆ 
+- หลีกเลี่ยงสาเหตุที่ทำให้ปวด เช่น การดื่มเหล้า, หิวเกินไป, เหนื่อยเกินไป, นอนไม่พอ ฯลฯ 
+ควรไปพบแพทย์ถ้ามีลักษณะอย่างใดอย่างหนึ่งดังต่อไปนี้ 
+1. กินยาแล้วไม่หายปวดและยังปวดติดต่อกันนานเกิน 24 ชั่วโมง
+2. กินยาแล้วหายปวดชั่วคราว แต่กลับปวดแรงและถี่ขึ้นทุกวันนานกว่า 7 วัน 
+3. ปวดมากตอนดึกหรือเช้ามืดจนทำให้สะดุ้งตื่น 
+4. ปวดศีรษะข้างเดียวรุนแรงในคนอายุมากกว่า 40 ปี 
+5. เป็น ๆ หาย โดยไม่ทราบสาเหตุแน่ชัด นานเกิน 2 สัปดาห์</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
