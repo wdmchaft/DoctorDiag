@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>node</key>
+		<string>D0</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ไข้หวัด</string>
+		<key>yes</key>
+		<string>D1</string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D1</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string> ไม่ค่อยรู้สึกตัว ปวดศีรษะมาก หรืออาเจียนรุนแรง</string>
+		<key>yes</key>
+		<string>D2</string>
+		<key>no</key>
+		<string>D4</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D2</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>คอแข็ง หรือกระหม่อมโป่งตึงในเด็กเล็ก</string>
+		<key>yes</key>
+		<string>D23</string>
+		<key>no</key>
+		<string>D3</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D3</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>เคยเข้าไปในดงมาลาเรีย หรือได้รับการถ่ายเลือดภายในระยะ 1 เดือน ที่ผ่านมา</string>
+		<key>yes</key>
+		<string>D26</string>
+		<key>no</key>
+		<string>D4</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D4</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>แขนขาอ่อนแรง หรืออัมพาตเกิดขึ้นเฉียบพลัน</string>
+		<key>yes</key>
+		<string>D24</string>
+		<key>no</key>
+		<string>D5</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D5</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีภาวะช็อก (เหงื่อออก ตัวเย็นกระสับกระส่าย ชีพจรเบาเร็วและความดันเลือดตก)</string>
+		<key>yes</key>
+		<string>D25</string>
+		<key>no</key>
+		<string>D6</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D6</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีไข้นานเกิน 1 เดือน</string>
+		<key>yes</key>
+		<string>D7</string>
+		<key>no</key>
+		<string>D11</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D7</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ไอและน้ำหนักลดฮวบ</string>
+		<key>yes</key>
+		<string>D27</string>
+		<key>no</key>
+		<string>D11</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D8</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดข้อนิ้วมือ 2 ข้าง ผมร่วงหรือ มีผื่นปีกผีเสื้อที่ข้างจมูก</string>
+		<key>yes</key>
+		<string>D28</string>
+		<key>no</key>
+		<string>D9</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D9</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>จับไข้หนาวสั่นวันเว้นวันและเคยเข้าไปในดงมาลาเรีย</string>
+		<key>yes</key>
+		<string>D26</string>
+		<key>no</key>
+		<string>D10</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D10</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีจุดแดงที่เยื่อบุตา / ใต้เล็บ ใช้เครื่องฟังหัวใจมีเสียงฟู่ (murmur) และม้ามโต</string>
+		<key>yes</key>
+		<string>D29</string>
+		<key>no</key>
+		<string>D30</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D11</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีไข้เกิน 7 วัน หรือหนาวสั่นมาก(ห่มผ้าหนาๆ)</string>
+		<key>yes</key>
+		<string>D12</string>
+		<key>no</key>
+		<string>D18</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D12</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีประวัติเคยเข้าไปในป่าดง ทุ่งหญ้าหรือไร่สวนในระยะ 1 เดือนที่ผ่านมาและผิวหนังพบรอยแผลเหมือนถูกบุหรี่จี้</string>
+		<key>yes</key>
+		<string>D31</string>
+		<key>no</key>
+		<string>D13</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D13</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>จับไข้หนาวสั่นวันละครั้ง หรือวันว้นวัน และมีประวัติเคยเข้าไปในดงมาลาเรีย หรือได้รับการถ่ายเลือดในระยะ 1 เดือนที่ผ่านมา</string>
+		<key>yes</key>
+		<string>D26</string>
+		<key>no</key>
+		<string>D14</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D14</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ใช้เครื่องฟังปอดมีเสียงกรอบแกรบ (crepitation)</string>
+		<key>yes</key>
+		<string>D32</string>
+		<key>no</key>
+		<string>D15</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D15</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>เคาะเจ็บที่สีข้างและปัสสาวะขุ่น</string>
+		<key>yes</key>
+		<string>D15</string>
+		<key>no</key>
+		<string>D16</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D16</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>บีบน่องรู้สึกปวดมากและมีอาชีพที่ต้องย้ำน้ำ หรืออยู่ในละแวกที่มีการระบาดของเล็ปโตสไปโรซิล</string>
+		<key>yes</key>
+		<string>D34</string>
+		<key>no</key>
+		<string>D17</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D17</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ไข้สูงตลอดเวลา และม้ามโต หรืออยู่ในละแวกที่มีการระบาดของไทฟอยด์</string>
+		<key>yes</key>
+		<string>D35</string>
+		<key>no</key>
+		<string>D36</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D18</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>มีอาการอย่างใดอย่างหนึ่งดังต่อไปนี้
+- หอบหรือเจ็บหน้าอก - ชัก
+- ซีด - ดีซ่าน
+- มีจุดแดง/จ้ำเขียวขึ้นตามตัว - ปวดท้อง
+- ท้องเดิน - ปวดข้อ
+- มีน้ำมูกหรือไอ - มีผื่นหรือตุ่มขึ้น</string>
+		<key>yes</key>
+		<string>D37</string>
+		<key>no</key>
+		<string>D19</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D19</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ไข้สูงตลอดเวลา</string>
+		<key>yes</key>
+		<string>D20</string>
+		<key>no</key>
+		<string>D38</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D20</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ทดสอบทูร์นิเคต์ให้ผลบวก</string>
+		<key>yes</key>
+		<string>D39</string>
+		<key>no</key>
+		<string>D21</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D21</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>หน้าแดง เปลือกตาแดง</string>
+		<key>yes</key>
+		<string>D39</string>
+		<key>no</key>
+		<string>D22</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D22</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ตับโตหรือม้ามโต หรืออยู่ในละแวกที่มีการระบาดของไทฟอยด์</string>
+		<key>yes</key>
+		<string>D35</string>
+		<key>no</key>
+		<string>D38</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D23</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>เยื่อหุ้มสมองอักเสบ
+เลือดออกในสมอง
+ฝีในสมอง </string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D24</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>อาจเป็นโปลิโอ / ไขสันหลังอักเสบ</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D25</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ช็อก (Shock)
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D26</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>มาลาเรีย (Malaria)
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D27</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>วัณโรคปอด/บีบี (Pulmonary tube
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D28</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>เอสแอลอี (SLE)
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D29</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>เยื่อบุหัวใจอักเสบ (Bacterial
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D30</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>อาจเป็นมะเร็ง /
+มาลาเรียเรื้อรัง /
+เอดส์ / สาเหตุร้ายแรงอื่น ๆ</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D31</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ไทฟัส/ไข้รากสาดใหญ่ (Typhus)
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D32</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ปอดอักเสบ (Pneumonia)
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D33</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>กรวยไตอักเสบ (Pyelonephritis)
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D34</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>เล็ปโตสไปโรซิส/ไข้ฉี่หนู (Lept
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D35</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ไทฟอยด์/ไข้รากสาดน้อย (Typhoid
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D36</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ดูอาการภายใน 3 วัน เพื่อตรวจหาสาเหตุอื่น</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D37</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>- หอบหรือเจ็บหน้าอก - ชัก
+- ซีดร่วมกับมีไข้ - จุดแดง/จ้ำเขียว
+- ดีซ่าน - ปวดท้องร่วมกับมีไข้
+- ท้องเดิน - ปวดข้อ
+- ไข้ร่วมกับมีน้ำมูก หรือไอ</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D38</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>รักษาตามอาการ (อาจเป็นโรคติดเชื้อไวรัสหรือสาเหตุอื่น ๆ ที่แสดงอาการในระยะแรกเริ่ม - นอนพักผ่อน
+- ดื่มน้ำมาก ๆ
+- ใช้ผ้าชุบน้ำเช็ดตัวบ่อย ๆ
+- ห้ามอาบน้ำเย็น
+- ถ้าเบื่ออาหาร กินน้ำหวาน ข้าวต้ม
+- ถ้าเจ็บคอใช้น้ำเกลือกลั้วคอ
+- ยาลดไข้
+ถ้าไม่ดีขึ้นใน 4 วัน หรือมีไข้เกิน 7 วัน หรือมีอาการเปลี่ยนแปลงผิดปกติ เช่น หายใจหอบ ปวดศีรษะมาก อาเจียนกินไม่ได้ เป็นต้น</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D39</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ไข้เลือดออก (Dengue hemorrhagi
+
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

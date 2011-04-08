@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>node</key>
+		<string>D0</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดหลัง</string>
+		<key>yes</key>
+		<string>D1</string>
+		<key>no</key>
+		<string>END</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D1</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>อาการเกิดหลังได้รับบาดเจ็บ</string>
+		<key>yes</key>
+		<string>D2</string>
+		<key>no</key>
+		<string>D3</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D2</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>แขนขาชา หรือ เป็นอัมพาต</string>
+		<key>yes</key>
+		<string>D4</string>
+		<key>no</key>
+		<string>D3</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D3</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดร้าวหรือเสียวชาลงมาตามด้านหลังของขา</string>
+		<key>yes</key>
+		<string>D6</string>
+		<key>no</key>
+		<string>D7</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D4</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ไขสันหลังได้รับบาดเจ็บ (Spinal
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D5</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>- ยาแก้ปวด 
+- ยาคลายกล้ามเนื้อ 
+ถ้าไม่ดีขึ้นใน 1 สัปดาห์ ควรไปพบแพทย์</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D6</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>รากประสาทถูกกด/หมอนรองกระดูกสันหลัง</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D7</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดตรงกลางหลังส่วนล่าง (บริเวณกระเบนเหน็บ)</string>
+		<key>yes</key>
+		<string>D8</string>
+		<key>no</key>
+		<string>D9</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D8</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ตั้งครรภ์นานกว่า 4 เดือน</string>
+		<key>yes</key>
+		<string>D23</string>
+		<key>no</key>
+		<string>D3</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D9</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>พบในคนอายุมากกว่า 60 ปี</string>
+		<key>yes</key>
+		<string>D12</string>
+		<key>no</key>
+		<string>D12</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D10</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>สาเหตุจากการตั้งครรภ์ 
+- ไม่ต้องทำอะไร</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D11</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดมากเวลายกของหนัก, นั่งนาน ๆ, ยืนนาน ๆ หรือใส่รองเท้าส้นสูง</string>
+		<key>yes</key>
+		<string>D14</string>
+		<key>no</key>
+		<string>D9</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D12</string>
+		<key>type</key>
+		<string>Decision</string>
+		<key>text</key>
+		<string>ปวดตามข้อเข่า/ข้อนิ้วมือหรือข้ออื่น ๆ ร่วมด้วย</string>
+		<key>yes</key>
+		<string>D15</string>
+		<key>no</key>
+		<string>D16</string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D13</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>- ยาแก้ปวด 
+- ยาคลายกล้ามเนื้อ 
+- หลีกเลี่ยงการนอนที่นอนนุ่ม 
+- ปรับท่านั่ง/ยืน/ยกของให้ถูกต้อง 
+ถ้าไม่ดีขึ้นใน 1 สัปดาห์ ควรไปพบแพทย์</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D14</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ปวดกล้ามเนื้อหลัง (Musculotend
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D15</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>ข้อเสื่อม/ปวดข้อในคนสูงอายุ (O
+ควรไปพบแพทย์ด่วน</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>node</key>
+		<string>D16</string>
+		<key>type</key>
+		<string>End</string>
+		<key>text</key>
+		<string>- ยาแก้ปวด 
+- ยาคลายกล้ามเนื้อ 
+- หลีกเลี่ยงการนอนที่นอนนุ่ม 
+- ปรับท่านั่ง/ยืน/ยกของให้ถูกต้อง 
+ถ้าไม่ดีขึ้นใน 1 สัปดาห์ ควรไปพบแพทย์</string>
+		<key>yes</key>
+		<string></string>
+		<key>no</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
