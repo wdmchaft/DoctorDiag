@@ -33,16 +33,21 @@
   [super viewDidLoad];
 	
 }
-
+// Create a ModalView to select first yourselves diagnosis
 - (IBAction)start:(id)sender {
+	
 	
 	self.modalView = [[FirstModalViewController alloc] initWithNibName:@"FirstModalViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	
+	
+	// By hand adding items to TableController
 	self.modalView.listItem = [NSArray arrayWithObjects:@"ปวดหลัง", @"ไข้", @"ปวดหัว", nil];
 	
 	/*
+	 
+	//Try to use CoreaAnimation for transition a view
+
 	UIView *currentView = self.view;
-	
 	UIView *window = [currentView superview];
 	[window addSubview:self.modalView.view];
 	[currentView removeFromSuperview];
@@ -55,8 +60,9 @@
 	
 	[[window layer] addAnimation:animation forKey:@"Switch Modal View"];
 	*/
+	
+	// Push ViewController to main Navigation Controller
 	[self.navigationController pushViewController:modalView animated:YES];
-//	[self.navigationController presentModalViewController:modalView animated:YES]; 
 
 }
 

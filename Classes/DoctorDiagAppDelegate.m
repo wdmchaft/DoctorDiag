@@ -12,7 +12,6 @@
 @implementation DoctorDiagAppDelegate
 
 @synthesize window;
-@synthesize firstView;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -22,12 +21,11 @@
   // Override point for customization after application launch.
 	navigationController = [[UINavigationController alloc] init];
 	
-	firstView = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	FirstViewController *firstView = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	
 	[navigationController pushViewController:firstView animated:YES];
 	
 	[self.window addSubview:navigationController.view];
-	
 	[self.window makeKeyAndVisible];
 	
   [firstView release];

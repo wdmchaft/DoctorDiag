@@ -2,17 +2,17 @@
 {
 	1D3623240D0F684500981E51 /* DoctorDiagAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
-			sepNavSelRange = "{374, 0}";
-			sepNavVisRange = "{0, 502}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 654}}";
+			sepNavSelRange = "{365, 0}";
+			sepNavVisRange = "{0, 373}";
 			sepNavWindowFrame = "{{15, 80}, {559, 693}}";
 		};
 	};
 	1D3623250D0F684500981E51 /* DoctorDiagAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 1300}}";
-			sepNavSelRange = "{745, 18}";
-			sepNavVisRange = "{1441, 1248}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 1222}}";
+			sepNavSelRange = "{361, 0}";
+			sepNavVisRange = "{0, 1513}";
 			sepNavWindowFrame = "{{15, 80}, {559, 693}}";
 		};
 	};
@@ -70,6 +70,12 @@
 			CED65287134F25D900353FEE = CED65287134F25D900353FEE /* PBXTextBookmark */;
 			CED65298134F26E300353FEE = CED65298134F26E300353FEE /* PBXTextBookmark */;
 			CED652A0134F550100353FEE = CED652A0134F550100353FEE /* PBXTextBookmark */;
+			CED652BE134F57EF00353FEE /* PBXTextBookmark */ = CED652BE134F57EF00353FEE /* PBXTextBookmark */;
+			CED652BF134F57EF00353FEE /* XCBuildMessageTextBookmark */ = CED652BF134F57EF00353FEE /* XCBuildMessageTextBookmark */;
+			CED652C0134F57EF00353FEE /* PBXTextBookmark */ = CED652C0134F57EF00353FEE /* PBXTextBookmark */;
+			CED652C9134F583700353FEE /* PBXTextBookmark */ = CED652C9134F583700353FEE /* PBXTextBookmark */;
+			CED652CA134F583700353FEE /* XCBuildMessageTextBookmark */ = CED652CA134F583700353FEE /* XCBuildMessageTextBookmark */;
+			CED652CB134F583700353FEE /* PBXTextBookmark */ = CED652CB134F583700353FEE /* PBXTextBookmark */;
 		};
 		sourceControlManager = CECD5C40134CC9A90024EBDD /* Source Control */;
 		userBuildSettings = {
@@ -98,9 +104,9 @@
 	};
 	CE421E52134CEE9B00E822F7 /* DecisionViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {763, 2223}}";
-			sepNavSelRange = "{3707, 0}";
-			sepNavVisRange = "{2057, 1278}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 2158}}";
+			sepNavSelRange = "{3109, 0}";
+			sepNavVisRange = "{1957, 1386}";
 			sepNavWindowFrame = "{{98, 55}, {672, 637}}";
 		};
 	};
@@ -170,17 +176,17 @@
 	};
 	CECD5C7C134CCE760024EBDD /* FirstModalViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
-			sepNavSelRange = "{493, 0}";
-			sepNavVisRange = "{0, 562}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 654}}";
+			sepNavSelRange = "{561, 0}";
+			sepNavVisRange = "{0, 561}";
 		};
 	};
 	CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 2899}}";
-			sepNavSelRange = "{1135, 0}";
-			sepNavVisRange = "{833, 1076}";
-			sepNavWindowFrame = "{{15, 80}, {559, 693}}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 2912}}";
+			sepNavSelRange = "{924, 0}";
+			sepNavVisRange = "{287, 1224}";
+			sepNavWindowFrame = "{{38, 115}, {672, 637}}";
 		};
 	};
 	CED6523B134F1D6C00353FEE /* PBXTextBookmark */ = {
@@ -198,7 +204,7 @@
 		fRef = CECD5C7C134CCE760024EBDD /* FirstModalViewController.h */;
 		name = "FirstModalViewController.h: 22";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 492;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 0;
@@ -208,7 +214,7 @@
 		fRef = CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */;
 		name = "FirstModalViewController.m: 49";
 		rLen = 0;
-		rLoc = 1135;
+		rLoc = 1064;
 		rType = 0;
 		vrLen = 1076;
 		vrLoc = 833;
@@ -253,18 +259,76 @@
 		vrLen = 1278;
 		vrLoc = 2057;
 	};
+	CED652BE134F57EF00353FEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* DoctorDiagAppDelegate.h */;
+		name = "DoctorDiagAppDelegate.h: 17";
+		rLen = 0;
+		rLoc = 365;
+		rType = 0;
+		vrLen = 261;
+		vrLoc = 168;
+	};
+	CED652BF134F57EF00353FEE /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No declaration of property 'firstView' found in the interface";
+		fRef = 1D3623250D0F684500981E51 /* DoctorDiagAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 13;
+		rType = 1;
+	};
+	CED652C0134F57EF00353FEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* DoctorDiagAppDelegate.m */;
+		name = "DoctorDiagAppDelegate.m: 15";
+		rLen = 0;
+		rLoc = 269;
+		rType = 0;
+		vrLen = 216;
+		vrLoc = 178;
+	};
+	CED652C9134F583700353FEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* DoctorDiagAppDelegate.h */;
+		name = "DoctorDiagAppDelegate.h: 16";
+		rLen = 0;
+		rLoc = 365;
+		rType = 0;
+		vrLen = 204;
+		vrLoc = 169;
+	};
+	CED652CA134F583700353FEE /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No declaration of property 'firstView' found in the interface";
+		fRef = 1D3623250D0F684500981E51 /* DoctorDiagAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 13;
+		rType = 1;
+	};
+	CED652CB134F583700353FEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* DoctorDiagAppDelegate.m */;
+		name = "DoctorDiagAppDelegate.m: 14";
+		rLen = 0;
+		rLoc = 269;
+		rType = 0;
+		vrLen = 253;
+		vrLoc = 178;
+	};
 	CEE1DD1E134CDDFF0032CD8E /* FirstViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 532}}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 654}}";
 			sepNavSelRange = "{257, 0}";
 			sepNavVisRange = "{0, 496}";
 		};
 	};
 	CEE1DD1F134CDDFF0032CD8E /* FirstViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {693, 1157}}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 1183}}";
 			sepNavSelRange = "{696, 0}";
-			sepNavVisRange = "{426, 1284}";
+			sepNavVisRange = "{246, 1622}";
 			sepNavWindowFrame = "{{15, 81}, {1045, 692}}";
 		};
 	};

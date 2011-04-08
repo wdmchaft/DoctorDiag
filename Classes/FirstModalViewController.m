@@ -16,7 +16,6 @@
 
 @synthesize listItem;
 
-
 #pragma mark -
 #pragma mark View lifecycle
 
@@ -30,6 +29,8 @@
 }
 
 - (IBAction)back:(id)sender {
+	// Prepair for using viewController without NavigationController
+	[self.navigationController popViewControllerAnimated:YES];
 	
 	/*
 	UIView *currentView = [self view];
@@ -40,9 +41,7 @@
 	
 	[self.view removeFromSuperview];
 	*/
-
-	[self.navigationController popViewControllerAnimated:YES];
-//	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	
 }
 
 - (void)viewDidLoad {
@@ -152,6 +151,8 @@
 }
 */
 
+
+// By hand adding source file (Plist) to array and also return file name
 - (NSString *)listFileNameFromIndex:(NSIndexPath *)indexPath {
 	NSArray *arrayOfFile = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", @"disease-headache", nil];
 	
@@ -159,17 +160,15 @@
 }
 
 
-
 #pragma mark -
 #pragma mark Table view delegate
 
+// Determine when user select on that row of TableView
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	DecisionViewController *decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	
 	decisionView.listFile = [[self listFileNameFromIndex:indexPath] copy];
-	
-	NSLog(@"listFile %@", decisionView.listFile);
 	
 	[decisionView.parentNodeLabel setText:[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
 	

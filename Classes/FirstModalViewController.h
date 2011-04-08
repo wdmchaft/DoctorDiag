@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstModalViewController : UIViewController <UITableViewDelegate,UITableViewDataSource> {
-	NSMutableArray *listItem;
 	
+	NSMutableArray *listItem;
 	IBOutlet UIView *view;
 	IBOutlet UITableView *tablewView;
 	IBOutlet UIButton *backButton, *diagStart;
-
 }
 
 @property(nonatomic, retain) NSMutableArray *listItem;
