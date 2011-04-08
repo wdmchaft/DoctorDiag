@@ -14,6 +14,7 @@
 @synthesize currentNode;
 @synthesize pathArray;
 @synthesize parentNodeLabel;
+@synthesize listFile;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -117,7 +118,7 @@
 }
 
 - (IBAction)backAction:(id)sender {
-	[self.view removeFromSuperview];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)showAllState:(id)sender {

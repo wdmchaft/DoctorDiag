@@ -40,7 +40,7 @@
 	
 	self.modalView.listItem = [NSArray arrayWithObjects:@"ปวดหลัง", @"ไข้", nil];
 	
-	
+	/*
 	UIView *currentView = self.view;
 	
 	UIView *window = [currentView superview];
@@ -54,11 +54,10 @@
 	[animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
 	
 	[[window layer] addAnimation:animation forKey:@"Switch Modal View"];
+	*/
+	[self.navigationController pushViewController:modalView animated:YES];
+//	[self.navigationController presentModalViewController:modalView animated:YES]; 
 
-	
-	/*
-	[self.navigationController presentModalViewController:modalView animated:YES]; */
-	
 }
 
 // Override to allow orientations other than the default portrait orientation.

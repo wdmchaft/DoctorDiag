@@ -254,7 +254,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>179</real>
+								<real>203</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -276,13 +276,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>1</integer>
+									<integer>14</integer>
+									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 13}, {179, 562}}</string>
+							<string>{{0, 0}, {203, 562}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -294,19 +294,19 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {196, 580}}</string>
+						<string>{{0, 0}, {220, 580}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>179</real>
+							<real>203</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>37 154 1075 621 0 0 1280 778 </string>
+						<string>99 116 1075 621 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>196pt</string>
+					<string>220pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FirstViewController.m</string>
+								<string>FirstModalViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,26 +327,26 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FirstViewController.m</string>
+										<string>FirstModalViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CED650A6134EBF4300353FEE</string>
+										<string>CED6516A134ECBA600353FEE</string>
 										<key>history</key>
 										<array>
 											<string>CE5A0805134D8B0E0017BA1C</string>
 											<string>CE5A0853134D8F220017BA1C</string>
-											<string>CE5F98EA134E0F0D0002C9BD</string>
-											<string>CE5F98EB134E0F0D0002C9BD</string>
-											<string>CED65086134EBE7700353FEE</string>
-											<string>CED65087134EBE7700353FEE</string>
-											<string>CED65088134EBE7700353FEE</string>
 											<string>CED65089134EBE7700353FEE</string>
 											<string>CED6508A134EBE7700353FEE</string>
-											<string>CED6508B134EBE7700353FEE</string>
-											<string>CED6508C134EBE7700353FEE</string>
-											<string>CED650A1134EBF3700353FEE</string>
-											<string>CED650A2134EBF3700353FEE</string>
+											<string>CED650E9134EC23B00353FEE</string>
+											<string>CED650EB134EC23B00353FEE</string>
+											<string>CED6512F134EC70300353FEE</string>
+											<string>CED65130134EC70300353FEE</string>
+											<string>CED65131134EC70300353FEE</string>
+											<string>CED65132134EC70300353FEE</string>
+											<string>CED65133134EC70300353FEE</string>
+											<string>CED65134134EC70300353FEE</string>
+											<string>CED65146134EC76100353FEE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -358,9 +358,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {874, 575}}</string>
+								<string>{{0, 0}, {850, 575}}</string>
 								<key>RubberWindowFrame</key>
-								<string>37 154 1075 621 0 0 1280 778 </string>
+								<string>99 116 1075 621 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -378,9 +378,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 580}, {874, 0}}</string>
+								<string>{{0, 580}, {850, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>37 154 1075 621 0 0 1280 778 </string>
+								<string>99 116 1075 621 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -389,7 +389,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>874pt</string>
+					<string>850pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -544,13 +544,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>CED6514F134EC7BA00353FEE</string>
+		<string>CED65149134EC76100353FEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>CE3D04F2122C36B9009F14AF</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/user/MobileProjects/DoctorDiag/DoctorDiag.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>37 154 1075 621 0 0 1280 778 </string>
+	<string>99 116 1075 621 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -571,7 +573,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FirstViewController.m</string>
+								<string>FirstModalViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -884,6 +886,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -896,7 +900,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>52 503 650 250 0 0 1280 778 </string>
+								<string>90 440 650 250 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -925,11 +929,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>52 503 650 250 0 0 1280 778 </string>
+			<string>90 440 650 250 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

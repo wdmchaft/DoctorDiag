@@ -13,6 +13,7 @@
 	NSMutableArray *pathArray;
 	NSArray *datasource;
 	NSDictionary *currentNode;	
+	NSString *listFile;
 	
   IBOutlet UIButton *yesLink, *noLink;
 	IBOutlet UILabel *quoteLabel;
@@ -23,6 +24,7 @@
 @property (nonatomic, retain) NSDictionary *currentNode;
 @property (nonatomic, retain) NSArray *datasource;
 @property (nonatomic, retain) NSMutableArray *pathArray;
+@property (nonatomic, copy) NSString *listFile;
 
 - (NSString *)_getYesNodeTitleFromNode:(NSDictionary *)node;
 - (NSString *)_getNoNodeTitleFromNode:(NSDictionary *)node;

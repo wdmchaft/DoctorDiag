@@ -30,16 +30,23 @@
 }
 
 - (IBAction)back:(id)sender {
+	
+	/*
 	UIView *currentView = [self view];
 
 	FirstViewController *firstView = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 
-	[currentView.superview addSubview:firstView.view];	
+	[currentView.superview addSubview:firstView.view];
+	
 	[self.view removeFromSuperview];
+	*/
 
+	[self.navigationController popViewControllerAnimated:YES];
+//	[self.parentViewController dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
+	self.navigationController.navigationBarHidden = NO;
     [super viewDidLoad];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -145,19 +152,31 @@
 }
 */
 
+- (NSString *)pickUpPlist:(NSIndexPath *)indexPath{
+ 	//NSArray *arrayOfResource = [[NSBundle mainBundle] pathsForResourcesOfType:@".plist" inDirectory:@"Resources"];
+	//NSLog(@"Array %@",arrayOfResource);
+	return @"";
+}
+
 
 #pragma mark -
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	DecisionViewController *decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	
+	//[self pickUpPlist:indexPath];
+	
+	[decisionView.parentNodeLabel setText:[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
+	
+	[self.navigationController pushViewController:decisionView animated:YES];
+	//[self.parentViewController dismissModalViewControllerAnimated:YES];
 	//decisionView.parentNodeLabel.text = [NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]
 	
-	[self.view addSubview:decisionView.view];
-	[decisionView.parentNodeLabel setText:[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
-	//[decisionView release];
+	//[self.view addSubview:decisionView.view];
+	
+	[decisionView release];
 }
 
 
@@ -178,7 +197,6 @@
 
 
 - (void)dealloc {
-	[decisionView release];
 	[self.listItem release];
   [super dealloc];
 }

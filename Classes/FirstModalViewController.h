@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DecisionViewController.h"
 
 @interface FirstModalViewController : UIViewController <UITableViewDelegate,UITableViewDataSource> {
 	NSMutableArray *listItem;
@@ -15,8 +14,7 @@
 	IBOutlet UIView *view;
 	IBOutlet UITableView *tablewView;
 	IBOutlet UIButton *backButton, *diagStart;
-	
-	DecisionViewController *decisionView;
+
 }
 
 @property(nonatomic, retain) NSMutableArray *listItem;
