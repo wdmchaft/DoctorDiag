@@ -16,8 +16,9 @@
 	NSString *listFile;
 	
   IBOutlet UIButton *yesLink, *noLink;
-	IBOutlet UILabel *quoteLabel;
+	//IBOutlet UILabel *quoteLabel;
 	IBOutlet UILabel *parentNodeLabel;
+	IBOutlet UITextView *quoteField;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *parentNodeLabel;

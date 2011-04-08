@@ -46,7 +46,7 @@
 }
 
 - (void)viewDidLoad {
-	self.navigationController.navigationBarHidden = NO;
+	self.navigationController.navigationBarHidden = YES;
     [super viewDidLoad];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
