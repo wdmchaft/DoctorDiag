@@ -30,7 +30,7 @@
 - (NSString *)_getYesNodeTitleFromNode:(NSDictionary *)node;
 - (NSString *)_getNoNodeTitleFromNode:(NSDictionary *)node;
 
-- (void)getDataFromSource;
+- (void)setDataFromSource;
 
 - (void)_traverseToNodeName:(NSString *)nodeTitle;
 - (BOOL)_toYesNode;

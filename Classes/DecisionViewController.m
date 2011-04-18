@@ -26,12 +26,18 @@
     return self;
 }
 
+// Set datasource (Now is Plist source) to Decision Tree
+- (void)setDataFromSource {
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSString *plistPath = [bundle pathForResource:self.listFile ofType:@"plist"];
+	self.datasource = [[NSArray alloc] initWithContentsOfFile:plistPath];	
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	
 	self.navigationController.navigationBarHidden = YES;
 
-  [self getDataFromSource];
+  [self setDataFromSource];
 	
 	self.currentNode = [[NSDictionary alloc] initWithDictionary:[self.datasource objectAtIndex:1]];
 	
@@ -50,16 +56,6 @@
     // Return YES for supported orientations.
     // return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
-}
-
-- (void)getDataFromSource {
-	
-	NSBundle *bundle = [NSBundle mainBundle];
-
-	NSString *plistPath = [bundle pathForResource:self.listFile ofType:@"plist"];
-  
-	self.datasource = [[NSArray alloc] initWithContentsOfFile:plistPath];	
-	
 }
 
 - (NSString *)_getNodeId:(NSDictionary *)node {
