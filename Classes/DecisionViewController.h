@@ -13,16 +13,19 @@
 	NSMutableArray *pathArray;
 	NSArray *datasource;
 	NSDictionary *currentNode;	
+	NSDictionary *previousNode;
 	NSString *listFile;
 	
-  IBOutlet UIButton *yesLink, *noLink;
+  IBOutlet UIButton *yesLink, *noLink, *viewAll;
 	//IBOutlet UILabel *quoteLabel;
 	IBOutlet UILabel *parentNodeLabel;
 	IBOutlet UITextView *quoteField;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *parentNodeLabel;
+@property (nonatomic, retain) IBOutlet UITextView *quoteField;
 @property (nonatomic, retain) NSDictionary *currentNode;
+@property (nonatomic, retain) NSDictionary *previousNode;
 @property (nonatomic, retain) NSArray *datasource;
 @property (nonatomic, retain) NSMutableArray *pathArray;
 @property (nonatomic, copy) NSString *listFile;

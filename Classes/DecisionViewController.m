@@ -12,15 +12,18 @@
 
 @synthesize datasource;
 @synthesize currentNode;
+@synthesize previousNode;
 @synthesize pathArray;
 @synthesize parentNodeLabel;
 @synthesize listFile;
+@synthesize quoteField;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+				// self.quoteField
         // Custom initialization.
     }
     return self;
@@ -36,11 +39,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	self.navigationController.navigationBarHidden = YES;
-
   [self setDataFromSource];
-	
 	self.currentNode = [[NSDictionary alloc] initWithDictionary:[self.datasource objectAtIndex:1]];
-	
 	self.pathArray = [[NSMutableArray alloc] init];
 	
 	[yesLink addTarget:self action:@selector(yesAction:) forControlEvents:UIControlEventTouchDown];
@@ -82,17 +82,13 @@
 	[self.datasource enumerateObjectsUsingBlock:^(id object,NSUInteger index,BOOL *stop) {
 		
 		if ([nodeTitle isEqualToString:[object valueForKey:@"node"]]) {
-			
 			if ([[object valueForKey:@"type"] isEqualToString:@"Decision"]) {
-				
+				self.previousNode = self.currentNode;
 				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
-				
 				[self.pathArray addObject:[self.currentNode copy]];
 			} 
 			else if ([[object valueForKey:@"type"] isEqualToString:@"End"]) {
-
-				quoteField.backgroundColor = [UIColor greenColor];
-				
+				self.quoteField.backgroundColor = [UIColor greenColor];
 				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
 			}
 			else {
@@ -102,12 +98,15 @@
 }
 
 - (void)refreshView {
-	quoteField.text = [self.currentNode valueForKey:@"text"];
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:0.7];
+  [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.quoteField cache:NO];
+	[UIView commitAnimations];
+	
+	self.quoteField.text = [self.currentNode valueForKey:@"text"];
 	
 	[self.pathArray enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop){
-		
 		NSLog(@"%@ ,",[object valueForKey:@"node"]);
-		
 	}];
 }
 
@@ -160,7 +159,7 @@
 
 
 - (void)dealloc {
-	[quoteField release];
+	[self.quoteField release];
 	[self.parentNodeLabel release];
 	[self.pathArray release];
 	[self.currentNode release];
