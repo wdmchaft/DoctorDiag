@@ -19,6 +19,8 @@
 @property(nonatomic, retain) NSMutableArray *listItem;
 
 - (IBAction)back:(id)sender;
+- (IBAction)info:(id)sender;
+
 - (NSString *)listFileNameFromIndex:(NSIndexPath *)indexPath;
 
 @end

@@ -9,6 +9,7 @@
 #import "FirstModalViewController.h"
 #import "DecisionViewController.h"
 #import "FirstViewController.h"
+#import "HowToDiagModalViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -41,6 +42,16 @@
 	
 	[self.view removeFromSuperview];
 	*/
+	
+}
+
+- (IBAction)info:(id)sender {
+	HowToDiagModalViewController *showModal = [[HowToDiagModalViewController alloc] initWithNibName:@"HowToDiagModalViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	[showModal setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+
+	[self.navigationController presentModalViewController:showModal animated:YES];
+	
+	[showModal release];
 	
 }
 

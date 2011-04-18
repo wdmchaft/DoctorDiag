@@ -36,16 +36,14 @@
 // Create a ModalView to select first yourselves diagnosis
 - (IBAction)start:(id)sender {
 	
-	
 	self.modalView = [[FirstModalViewController alloc] initWithNibName:@"FirstModalViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
-	
 	
 	// By hand adding items to TableController
 	self.modalView.listItem = [NSArray arrayWithObjects:@"ปวดหลัง", @"ไข้", @"ปวดหัว", nil];
 	
 	/*
 	 
-	//Try to use CoreaAnimation for transition a view
+	//Tried to use CoreaAnimation for transition a view
 
 	UIView *currentView = self.view;
 	UIView *window = [currentView superview];

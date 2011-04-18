@@ -18,6 +18,11 @@
 		CE5A062E134D64990017BA1C /* disease-backache.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5A062C134D64990017BA1C /* disease-backache.plist */; };
 		CE5A062F134D64990017BA1C /* disease-flu.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5A062D134D64990017BA1C /* disease-flu.plist */; };
 		CE5A084B134D8EF60017BA1C /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE5A084A134D8EF60017BA1C /* icon.jpg */; };
+		CE875FD8135C14CC006B6736 /* ShowDiagNodeTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CE875FD6135C14CC006B6736 /* ShowDiagNodeTree.m */; };
+		CE875FD9135C14CC006B6736 /* ShowDiagNodeTree.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE875FD7135C14CC006B6736 /* ShowDiagNodeTree.xib */; };
+		CE87609A135C29AA006B6736 /* HowToDiagModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE876098135C29AA006B6736 /* HowToDiagModalViewController.m */; };
+		CE87609B135C29AA006B6736 /* HowToDiagModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE876099135C29AA006B6736 /* HowToDiagModalViewController.xib */; };
+		CE8760AA135C3013006B6736 /* DiagNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8760A9135C3013006B6736 /* DiagNode.m */; };
 		CECD5C7F134CCE760024EBDD /* FirstModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */; };
 		CECD5C80134CCE760024EBDD /* FirstModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */; };
 		CED65203134ED8C500353FEE /* disease-headache.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED65202134ED8C500353FEE /* disease-headache.plist */; };
@@ -44,6 +49,14 @@
 		CE5A062C134D64990017BA1C /* disease-backache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "disease-backache.plist"; sourceTree = "<group>"; };
 		CE5A062D134D64990017BA1C /* disease-flu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "disease-flu.plist"; sourceTree = "<group>"; };
 		CE5A084A134D8EF60017BA1C /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		CE875FD5135C14CC006B6736 /* ShowDiagNodeTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDiagNodeTree.h; sourceTree = "<group>"; };
+		CE875FD6135C14CC006B6736 /* ShowDiagNodeTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDiagNodeTree.m; sourceTree = "<group>"; };
+		CE875FD7135C14CC006B6736 /* ShowDiagNodeTree.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ShowDiagNodeTree.xib; path = Classes/ShowDiagNodeTree.xib; sourceTree = "<group>"; };
+		CE876097135C29AA006B6736 /* HowToDiagModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToDiagModalViewController.h; sourceTree = "<group>"; };
+		CE876098135C29AA006B6736 /* HowToDiagModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToDiagModalViewController.m; sourceTree = "<group>"; };
+		CE876099135C29AA006B6736 /* HowToDiagModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HowToDiagModalViewController.xib; path = Classes/HowToDiagModalViewController.xib; sourceTree = "<group>"; };
+		CE8760A8135C3013006B6736 /* DiagNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiagNode.h; sourceTree = "<group>"; };
+		CE8760A9135C3013006B6736 /* DiagNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiagNode.m; sourceTree = "<group>"; };
 		CECD5C7C134CCE760024EBDD /* FirstModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModalViewController.h; sourceTree = "<group>"; };
 		CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModalViewController.m; sourceTree = "<group>"; };
 		CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FirstModalViewController.xib; path = Classes/FirstModalViewController.xib; sourceTree = "<group>"; };
@@ -81,6 +94,12 @@
 				CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */,
 				CEE1DD1E134CDDFF0032CD8E /* FirstViewController.h */,
 				CEE1DD1F134CDDFF0032CD8E /* FirstViewController.m */,
+				CE875FD5135C14CC006B6736 /* ShowDiagNodeTree.h */,
+				CE875FD6135C14CC006B6736 /* ShowDiagNodeTree.m */,
+				CE876097135C29AA006B6736 /* HowToDiagModalViewController.h */,
+				CE876098135C29AA006B6736 /* HowToDiagModalViewController.m */,
+				CE8760A8135C3013006B6736 /* DiagNode.h */,
+				CE8760A9135C3013006B6736 /* DiagNode.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -121,9 +140,11 @@
 				CE5A062B134D647D0017BA1C /* Diseases */,
 				CEE1DD2C134CDF1A0032CD8E /* Images */,
 				CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */,
+				CE876099135C29AA006B6736 /* HowToDiagModalViewController.xib */,
 				CEE1DD20134CDDFF0032CD8E /* FirstViewController.xib */,
 				CE421E53134CEE9B00E822F7 /* DecisionViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				CE875FD7135C14CC006B6736 /* ShowDiagNodeTree.xib */,
 				8D1107310486CEB800E47090 /* DoctorDiag-Info.plist */,
 			);
 			name = Resources;
@@ -216,6 +237,8 @@
 				CE5A062F134D64990017BA1C /* disease-flu.plist in Resources */,
 				CE5A084B134D8EF60017BA1C /* icon.jpg in Resources */,
 				CED65203134ED8C500353FEE /* disease-headache.plist in Resources */,
+				CE875FD9135C14CC006B6736 /* ShowDiagNodeTree.xib in Resources */,
+				CE87609B135C29AA006B6736 /* HowToDiagModalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +254,9 @@
 				CECD5C7F134CCE760024EBDD /* FirstModalViewController.m in Sources */,
 				CEE1DD21134CDDFF0032CD8E /* FirstViewController.m in Sources */,
 				CE421E54134CEE9B00E822F7 /* DecisionViewController.m in Sources */,
+				CE875FD8135C14CC006B6736 /* ShowDiagNodeTree.m in Sources */,
+				CE87609A135C29AA006B6736 /* HowToDiagModalViewController.m in Sources */,
+				CE8760AA135C3013006B6736 /* DiagNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

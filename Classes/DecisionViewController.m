@@ -7,6 +7,7 @@
 //
 
 #import "DecisionViewController.h"
+#import "ShowDiagNodeTree.h"
 
 @implementation DecisionViewController
 
@@ -55,7 +56,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     // return (interfaceOrientation == UIInterfaceOrientationPortrait);
-	return YES;
+	return NO;
 }
 
 - (NSString *)_getNodeId:(NSDictionary *)node {
@@ -105,20 +106,21 @@
 	
 	self.quoteField.text = [self.currentNode valueForKey:@"text"];
 	
+	/*
 	[self.pathArray enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop){
 		NSLog(@"%@ ,",[object valueForKey:@"node"]);
 	}];
+	*/
 }
 
 - (BOOL)_toYesNode {
 	[self _traverseToNodeName:[self _getYesNodeTitleFromNode:self.currentNode]];
-	NSLog(@"Current Node : %@",[self.currentNode valueForKey:@"text"]);
+	
 	return YES;
 }
 
 - (BOOL)_toNoNode {
 	[self _traverseToNodeName:[self _getNoNodeTitleFromNode:self.currentNode]];
-	NSLog(@"Current Node : %@",[self.currentNode valueForKey:@"text"]);
 	
 	return YES;
 }
@@ -141,6 +143,11 @@
 
 - (IBAction)showAllState:(id)sender {
 	NSLog(@"Show all decision state");
+	ShowDiagNodeTree *showAllTree = [[ShowDiagNodeTree alloc] initWithNibName:@"ShowDiagNodeTree" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	showAllTree.datasource = self.pathArray;
+	[self.navigationController pushViewController:showAllTree animated:YES];
+	
+	[showAllTree release];
 }
 
 

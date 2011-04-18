@@ -17,7 +17,6 @@
 	NSString *listFile;
 	
   IBOutlet UIButton *yesLink, *noLink, *viewAll;
-	//IBOutlet UILabel *quoteLabel;
 	IBOutlet UILabel *parentNodeLabel;
 	IBOutlet UITextView *quoteField;
 }
