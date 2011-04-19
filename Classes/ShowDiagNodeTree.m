@@ -7,7 +7,7 @@
 //
 
 #import "ShowDiagNodeTree.h"
-
+#import "DiagNode.h"
 
 @implementation ShowDiagNodeTree
 
@@ -24,14 +24,30 @@
 }
 
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	int i=0;
+	CGFloat lineSpacing    = 10.0f;
+	CGFloat buttonSpacing  = 20.0f;
+	CGFloat buttonWidth    = 120.0f;
+	CGFloat buttonHeight   = 40.0f;
 	
-	NSLog(@"Path array : %@", self.datasource);
+	for (UIButton *node in self.datasource) {
+		UIButton *testNode = [[UIButton alloc] init];
+		testNode.titleLabel.textColor = [UIColor blackColor];
+		[testNode setTitle:[node valueForKey:@"text"] forState:UIControlStateNormal];
+		testNode.frame = CGRectMake(60, 40 + (++i * 60) + buttonSpacing, buttonWidth, buttonHeight);
+		testNode.backgroundColor = [UIColor colorWithRed:0.235 green:0.639 blue:0.0 alpha:1.0];
+		[self.view addSubview:testNode];
+		
+		
+		//CGPoint *path = CGPointMake(60, 20);
+		
+		[testNode release];
+	}
+	// Implement Each node
 }
-
 
 /*
 // Override to allow orientations other than the default portrait orientation.

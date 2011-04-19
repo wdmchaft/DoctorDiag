@@ -105,7 +105,6 @@
 	[UIView commitAnimations];
 	
 	self.quoteField.text = [self.currentNode valueForKey:@"text"];
-	
 	/*
 	[self.pathArray enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop){
 		NSLog(@"%@ ,",[object valueForKey:@"node"]);

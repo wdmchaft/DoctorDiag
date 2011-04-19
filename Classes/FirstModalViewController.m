@@ -190,6 +190,7 @@
 	//[self.view addSubview:decisionView.view];
 	
 	[decisionView release];
+	[tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 

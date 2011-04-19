@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DiagNode : UIView {
-
+@interface DiagNode : UIButton {
+	
 }
 
 @end
