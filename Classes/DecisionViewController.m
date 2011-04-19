@@ -68,7 +68,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     // return (interfaceOrientation == UIInterfaceOrientationPortrait);
-	return NO;
+	return YES;
 }
 
 // Method for retrive node id from Dictionary
@@ -153,7 +153,6 @@
 		self.quoteField.backgroundColor = [UIColor whiteColor];
 	}
 
-	
 	/*
 	// Monitor pathArray Object
 	[self.pathArray enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop){

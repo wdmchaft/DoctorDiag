@@ -22,7 +22,6 @@
 		CE875FD9135C14CC006B6736 /* ShowDiagNodeTree.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE875FD7135C14CC006B6736 /* ShowDiagNodeTree.xib */; };
 		CE87609A135C29AA006B6736 /* HowToDiagModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE876098135C29AA006B6736 /* HowToDiagModalViewController.m */; };
 		CE87609B135C29AA006B6736 /* HowToDiagModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE876099135C29AA006B6736 /* HowToDiagModalViewController.xib */; };
-		CE8760AA135C3013006B6736 /* DiagNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8760A9135C3013006B6736 /* DiagNode.m */; };
 		CECD5C7F134CCE760024EBDD /* FirstModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */; };
 		CECD5C80134CCE760024EBDD /* FirstModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */; };
 		CED65203134ED8C500353FEE /* disease-headache.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED65202134ED8C500353FEE /* disease-headache.plist */; };
@@ -55,8 +54,6 @@
 		CE876097135C29AA006B6736 /* HowToDiagModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToDiagModalViewController.h; sourceTree = "<group>"; };
 		CE876098135C29AA006B6736 /* HowToDiagModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToDiagModalViewController.m; sourceTree = "<group>"; };
 		CE876099135C29AA006B6736 /* HowToDiagModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HowToDiagModalViewController.xib; path = Classes/HowToDiagModalViewController.xib; sourceTree = "<group>"; };
-		CE8760A8135C3013006B6736 /* DiagNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiagNode.h; sourceTree = "<group>"; };
-		CE8760A9135C3013006B6736 /* DiagNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiagNode.m; sourceTree = "<group>"; };
 		CECD5C7C134CCE760024EBDD /* FirstModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModalViewController.h; sourceTree = "<group>"; };
 		CECD5C7D134CCE760024EBDD /* FirstModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModalViewController.m; sourceTree = "<group>"; };
 		CECD5C7E134CCE760024EBDD /* FirstModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FirstModalViewController.xib; path = Classes/FirstModalViewController.xib; sourceTree = "<group>"; };
@@ -98,8 +95,6 @@
 				CE875FD6135C14CC006B6736 /* ShowDiagNodeTree.m */,
 				CE876097135C29AA006B6736 /* HowToDiagModalViewController.h */,
 				CE876098135C29AA006B6736 /* HowToDiagModalViewController.m */,
-				CE8760A8135C3013006B6736 /* DiagNode.h */,
-				CE8760A9135C3013006B6736 /* DiagNode.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -256,7 +251,6 @@
 				CE421E54134CEE9B00E822F7 /* DecisionViewController.m in Sources */,
 				CE875FD8135C14CC006B6736 /* ShowDiagNodeTree.m in Sources */,
 				CE87609A135C29AA006B6736 /* HowToDiagModalViewController.m in Sources */,
-				CE8760AA135C3013006B6736 /* DiagNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

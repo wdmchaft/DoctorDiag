@@ -6,8 +6,8 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/CoreAnimation.h>
 #import "ShowDiagNodeTree.h"
-#import "DiagNode.h"
 
 @implementation ShowDiagNodeTree
 
@@ -23,29 +23,75 @@
     return self;
 }
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	int i=0;
-	//CGFloat lineSpacing    = 10.0f;
-	CGFloat buttonSpacing  = 20.0f;
-	CGFloat buttonWidth    = 120.0f;
-	CGFloat buttonHeight   = 40.0f;
 	
-	for (UIButton *node in self.datasource) {
-		UIButton *decisionNode = [[UIButton alloc] init];
-		decisionNode.titleLabel.textColor = [UIColor blackColor];
-		[decisionNode setTitle:[node valueForKey:@"text"] forState:UIControlStateNormal];
-		decisionNode.frame = CGRectMake(60, 40 + (++i * 60) + buttonSpacing, buttonWidth, buttonHeight);
-		decisionNode.backgroundColor = [UIColor colorWithRed:0.235 green:0.639 blue:0.0 alpha:1.0];
-		[self.view addSubview:decisionNode];
+	//lineSpacing    = 10.0f;
+	buttonSpacing  = 20.0f;
+	buttonWidth    = 200.0f;
+	buttonHeight   = 40.0f;
+	
+	nodeButtonArray = [[NSMutableArray alloc] init];
+	
+	timer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(timeTicker) userInfo:nil repeats:YES];
+	
+	[scrollView setContentSize:CGSizeMake(280, [self.datasource count] * 60)];
+	[scrollView setContentOffset:CGPointMake(0, 0)];
+	
+	[self createNode];
+}
+
+- (void)timeTicker {
+	if (countButton < [nodeButtonArray count]) {
+		UIButton *aButton = [nodeButtonArray objectAtIndex:countButton];
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.55];
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+		[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:aButton cache:NO];
+		aButton.frame = CGRectMake(40, 0 + (countButton * 60) + buttonSpacing, buttonWidth, buttonHeight);
+		countButton++;
+		[UIView commitAnimations];
 		
-		//CGPoint *path = CGPointMake(60, 20);
+		// Bouncing Animation Tutorial from http://www.uchidacoonga.com/2010/12/how-to-slide-in-new-window-with-bounce-animation/
+		CABasicAnimation *bounceAnimation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+		bounceAnimation.duration = 0.2;
+		bounceAnimation.fromValue = [NSNumber numberWithInt:0];
+		bounceAnimation.toValue = [NSNumber numberWithInt:10];
+		bounceAnimation.repeatCount = 2;
+		bounceAnimation.autoreverses = YES;
+		bounceAnimation.fillMode = kCAFillModeForwards;
+		bounceAnimation.removedOnCompletion = NO;
+		bounceAnimation.additive = YES;
+		[aButton.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
 		
-		[decisionNode release];
 	}
-	// Implement Each node
+}
+
+
+- (void)createNode {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	int i=0;
+	for (UIButton *node in self.datasource) {
+		
+		UIButton *decisionNode = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		decisionNode.titleLabel.textColor = [UIColor blackColor];
+		decisionNode.titleLabel.lineBreakMode = 2;
+		
+		[decisionNode setTitle:[node valueForKey:@"text"] forState:UIControlStateNormal];
+		decisionNode.frame = CGRectMake(500, 0 + (i * 60) + buttonSpacing, buttonWidth, buttonHeight);
+		
+		[nodeButtonArray addObject:decisionNode];
+		
+		[scrollView addSubview:decisionNode];
+		//[self animationWithNode:decisionNode sequenceNo:i];
+		
+		i++;
+	}
+	countButton = 0;
+	[pool drain];
+	
+	NSLog(@"NodeButtonArray : %@", nodeButtonArray);
 }
 
 /*
@@ -74,6 +120,7 @@
 
 
 - (void)dealloc {
+	[timer release];
     [super dealloc];
 }
 

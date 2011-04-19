@@ -136,7 +136,7 @@
 					</object>
 					<object class="IBUITextView" id="1010935381">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">282</int>
+						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{20, 114}, {280, 249}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -191,7 +191,7 @@
 					</object>
 					<object class="IBUIButton" id="454258618">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">289</int>
 						<string key="NSFrame">{{175, 71}, {61, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -429,7 +429,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>DecisionViewController</string>
 					<string>UIResponder</string>
-					<string>{{500, 251}, {320, 460}}</string>
+					<string>{{455, 228}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
