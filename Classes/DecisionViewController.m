@@ -21,11 +21,12 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withRootNodeLabel:(NSString *)rootNodeLabel {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-				// self.quoteField
         // Custom initialization.
+			titleLabel = [[NSString alloc] init];
+			titleLabel = [rootNodeLabel copy];
     }
     return self;
 }
@@ -37,19 +38,30 @@
 	self.datasource = [[NSArray alloc] initWithContentsOfFile:plistPath];	
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	self.parentNodeLabel.text = titleLabel;
+}
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	self.navigationController.navigationBarHidden = YES;
+	
+	// Retrieve data set from plist.
   [self setDataFromSource];
+	
+	// Initialize Object for handle current node.
 	self.currentNode = [[NSDictionary alloc] initWithDictionary:[self.datasource objectAtIndex:1]];
+	
+	// Initialize Storable Array for node tracking.
 	self.pathArray = [[NSMutableArray alloc] init];
 	
-	[yesLink addTarget:self action:@selector(yesAction:) forControlEvents:UIControlEventTouchDown];
-	[noLink addTarget:self action:@selector(noAction:) forControlEvents:UIControlEventTouchDown];
+	// Insert root node to path array
+	[self.pathArray addObject:self.currentNode];
 	
+	// Display Node
 	[self refreshView];
 	[super viewDidLoad];
-	
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -72,16 +84,16 @@
 	return [node valueForKey:@"no"];
 }
 
-// Add Plist
+// Insert file name of plist to array.
 - (NSString *)pickUpPlist:(NSIndexPath *)indexPath {
 	NSArray *arrayOfPlist = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", nil];
 	return [arrayOfPlist objectAtIndex:indexPath.row];
 }
 
-// Implement Tree Traversal
+// Implement Tree Traversal.
+// Using Block 
+// Require iOS 4.0 or later
 - (void)traverseToNodeName:(NSString *)nodeTitle {
-	// Using Block 
-	// Require iOS 4.0 or later
 	
 	NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
 	[self.datasource enumerateObjectsUsingBlock:^(id object,NSUInteger index,BOOL *stop) {
@@ -97,8 +109,11 @@
 			}
 			// End node 
 			else if ([[object valueForKey:@"type"] isEqualToString:@"End"]) {
+				
 				self.quoteField.backgroundColor = [UIColor greenColor];
 				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
+				[self.pathArray addObject:self.currentNode];
+				
 			}
 			else {
 				NSLog(@"Node Type is not match. :: %@",[object valueForKey:@"type"]);
@@ -122,6 +137,23 @@
 	// Get CurrentText from traversed node 
 	self.quoteField.text = [self.currentNode valueForKey:@"text"];
 	
+	if ([self.pathArray count] > 1) {
+		backwardLink.titleLabel.textColor = [UIColor darkGrayColor];
+		viewAllLink.titleLabel.textColor = [UIColor darkGrayColor];
+	}
+	else {
+		backwardLink.titleLabel.textColor = [UIColor lightGrayColor];
+		viewAllLink.titleLabel.textColor = [UIColor lightGrayColor];
+	}
+
+	if ([[self.currentNode valueForKey:@"type"] isEqualToString:@"End"]) {
+		self.quoteField.backgroundColor = [UIColor greenColor];
+	}
+	else {
+		self.quoteField.backgroundColor = [UIColor whiteColor];
+	}
+
+	
 	/*
 	// Monitor pathArray Object
 	[self.pathArray enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop){
@@ -130,28 +162,30 @@
 	*/
 }
 
-- (BOOL)_toYesNode {
-	[self traverseToNodeName:[self getYesNodeTitleFromNode:self.currentNode]];
-	
-	return YES;
-}
-
-- (BOOL)_toNoNode {
-	[self traverseToNodeName:[self getNoNodeTitleFromNode:self.currentNode]];
-	
-	return YES;
-}
-
 - (IBAction)yesAction:(id)sender {
-	// Get Next Node
-	[self _toYesNode];
+	// Move to yesNode
+	[self traverseToNodeName:[self getYesNodeTitleFromNode:self.currentNode]];
 	[self refreshView];
 }
 
 - (IBAction)noAction:(id)sender {
-  // Get Next Node
-	[self _toNoNode];
+  // Move to noNode
+	[self traverseToNodeName:[self getNoNodeTitleFromNode:self.currentNode]];
 	[self refreshView];
+}
+
+// Move back from currentNode
+- (IBAction)traverseBackward:(id)sender; {
+	@try {
+		if ([self.pathArray count] > 1) {
+			[self.pathArray removeLastObject];
+			self.currentNode = [self.pathArray lastObject];
+			[self refreshView];
+		}
+	}
+	@catch (NSException * e) {
+		NSLog(@"Minimum PathArray.");
+	}
 }
 
 - (IBAction)backAction:(id)sender {
@@ -183,6 +217,7 @@
 
 
 - (void)dealloc {
+	[titleLabel release];
 	[self.quoteField release];
 	[self.parentNodeLabel release];
 	[self.pathArray release];

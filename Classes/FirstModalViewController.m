@@ -177,17 +177,19 @@
 // Determine when user select on that row of TableView
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	DecisionViewController *decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	DecisionViewController *decisionView = [[DecisionViewController alloc] 
+																					initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"] 
+																					withRootNodeLabel:
+																					[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
 	
 	decisionView.listFile = [[self listFileNameFromIndex:indexPath] copy];
 	
-	[decisionView.parentNodeLabel setText:[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
+	NSLog(@"Text Label : %@", [NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]);
+	//decisionView.parentNodeLabel.text = [NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]];
 	
 	[self.navigationController pushViewController:decisionView animated:YES];
 	//[self.parentViewController dismissModalViewControllerAnimated:YES];
 	//decisionView.parentNodeLabel.text = [NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]
-	
-	//[self.view addSubview:decisionView.view];
 	
 	[decisionView release];
 	[tableView deselectRowAtIndexPath:indexPath animated:NO];

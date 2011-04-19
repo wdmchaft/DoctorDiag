@@ -12,11 +12,10 @@
 @interface DecisionViewController : UIViewController {
 	NSMutableArray *pathArray;
 	NSArray *datasource;
-	NSDictionary *currentNode;	
-	NSDictionary *previousNode;
-	NSString *listFile;
+	NSDictionary *currentNode, *previousNode;
+	NSString *listFile, *titleLabel;
 	
-  IBOutlet UIButton *yesLink, *noLink, *viewAll;
+  IBOutlet UIButton *yesLink, *noLink, *viewAllLink, *backwardLink;
 	IBOutlet UILabel *parentNodeLabel;
 	IBOutlet UITextView *quoteField;
 }
@@ -35,17 +34,17 @@
 - (void)setDataFromSource;
 
 - (void)traverseToNodeName:(NSString *)nodeTitle;
-- (BOOL)_toYesNode;
-- (BOOL)_toNoNode;
 
+- (IBAction)traverseBackward:(id)sender;
 - (IBAction)yesAction:(id)sender;
 - (IBAction)noAction:(id)sender;
+
 - (IBAction)backAction:(id)sender;
 - (IBAction)showAllState:(id)sender;
 
 
 - (void)refreshView;
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withRootNodeLabel:(NSString *)titleLabel;
 
 
 
