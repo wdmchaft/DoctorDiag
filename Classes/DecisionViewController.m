@@ -59,53 +59,71 @@
 	return NO;
 }
 
-- (NSString *)_getNodeId:(NSDictionary *)node {
+// Method for retrive node id from Dictionary
+- (NSString *)getNodeIdFromObject:(NSDictionary *)node {
 	return [node valueForKey:@"node"];
 }
 
-- (NSString *)_getYesNodeTitleFromNode:(NSDictionary *)node {
+- (NSString *)getYesNodeTitleFromNode:(NSDictionary *)node {
 	return [node valueForKey:@"yes"];
 }
 
-- (NSString *)_getNoNodeTitleFromNode:(NSDictionary *)node {
+- (NSString *)getNoNodeTitleFromNode:(NSDictionary *)node {
 	return [node valueForKey:@"no"];
 }
 
+// Add Plist
 - (NSString *)pickUpPlist:(NSIndexPath *)indexPath {
- 	
 	NSArray *arrayOfPlist = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", nil];
-	
 	return [arrayOfPlist objectAtIndex:indexPath.row];
-	
 }
 
-- (void)_traverseToNodeName:(NSString *)nodeTitle {
+// Implement Tree Traversal
+- (void)traverseToNodeName:(NSString *)nodeTitle {
+	// Using Block 
+	// Require iOS 4.0 or later
+	
+	NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
 	[self.datasource enumerateObjectsUsingBlock:^(id object,NSUInteger index,BOOL *stop) {
 		
+		// Check whether node name is similar to travarsed node
 		if ([nodeTitle isEqualToString:[object valueForKey:@"node"]]) {
+			
+			// Check whether node type is Decision Node
 			if ([[object valueForKey:@"type"] isEqualToString:@"Decision"]) {
 				self.previousNode = self.currentNode;
 				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
 				[self.pathArray addObject:[self.currentNode copy]];
-			} 
+			}
+			// End node 
 			else if ([[object valueForKey:@"type"] isEqualToString:@"End"]) {
 				self.quoteField.backgroundColor = [UIColor greenColor];
 				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
 			}
 			else {
-				NSLog(@"Node type did not match.");
+				NSLog(@"Node Type is not match. :: %@",[object valueForKey:@"type"]);
 			}
-		}}];
+		}}
+	 ];
+	
+	NSTimeInterval time = [NSDate timeIntervalSinceReferenceDate] - startTime;
+	NSLog(@"Duration : %f ms",time * 10*10*10);
+	
 }
 
 - (void)refreshView {
+	
+	// Node Transition, using Page Curl Up
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.7];
   [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.quoteField cache:NO];
 	[UIView commitAnimations];
 	
+	// Get CurrentText from traversed node 
 	self.quoteField.text = [self.currentNode valueForKey:@"text"];
+	
 	/*
+	// Monitor pathArray Object
 	[self.pathArray enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop){
 		NSLog(@"%@ ,",[object valueForKey:@"node"]);
 	}];
@@ -113,13 +131,13 @@
 }
 
 - (BOOL)_toYesNode {
-	[self _traverseToNodeName:[self _getYesNodeTitleFromNode:self.currentNode]];
+	[self traverseToNodeName:[self getYesNodeTitleFromNode:self.currentNode]];
 	
 	return YES;
 }
 
 - (BOOL)_toNoNode {
-	[self _traverseToNodeName:[self _getNoNodeTitleFromNode:self.currentNode]];
+	[self traverseToNodeName:[self getNoNodeTitleFromNode:self.currentNode]];
 	
 	return YES;
 }
@@ -141,8 +159,8 @@
 }
 
 - (IBAction)showAllState:(id)sender {
-	NSLog(@"Show all decision state");
-	ShowDiagNodeTree *showAllTree = [[ShowDiagNodeTree alloc] initWithNibName:@"ShowDiagNodeTree" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	ShowDiagNodeTree *showAllTree = [[ShowDiagNodeTree alloc] 
+																	 initWithNibName:@"ShowDiagNodeTree" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
 	showAllTree.datasource = self.pathArray;
 	[self.navigationController pushViewController:showAllTree animated:YES];
 	

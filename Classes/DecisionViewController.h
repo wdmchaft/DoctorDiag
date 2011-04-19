@@ -29,12 +29,12 @@
 @property (nonatomic, retain) NSMutableArray *pathArray;
 @property (nonatomic, copy) NSString *listFile;
 
-- (NSString *)_getYesNodeTitleFromNode:(NSDictionary *)node;
-- (NSString *)_getNoNodeTitleFromNode:(NSDictionary *)node;
+- (NSString *)getYesNodeTitleFromNode:(NSDictionary *)node;
+- (NSString *)getNoNodeTitleFromNode:(NSDictionary *)node;
 
 - (void)setDataFromSource;
 
-- (void)_traverseToNodeName:(NSString *)nodeTitle;
+- (void)traverseToNodeName:(NSString *)nodeTitle;
 - (BOOL)_toYesNode;
 - (BOOL)_toNoNode;
 
