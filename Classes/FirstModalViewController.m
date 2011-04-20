@@ -166,11 +166,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	// Initialize Decision View
-	DecisionViewController *decisionView = [[DecisionViewController alloc] 
-																					initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"] 
-																					withRootNodeLabel:
-																					[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
-	// Pass File Name
+	DecisionViewController *decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"] withRootNodeLabel:[NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]];
+	
+    //DecisionViewController *decisionView = [[DecisionViewController alloc] initWithNibName:@"DecisionViewController" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+    
+    // Pass File Name
 	decisionView.listFile = [[self listFileNameFromIndex:indexPath] copy];
 	
 	NSLog(@"Text Label : %@", [NSString stringWithFormat:@"อาการ%@",[self.listItem objectAtIndex:indexPath.row]]);

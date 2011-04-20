@@ -21,12 +21,20 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization.
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withRootNodeLabel:(NSString *)rootNodeLabel {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-			titleLabel = [[NSString alloc] init];
-			titleLabel = [rootNodeLabel copy];
+		titleLabel = [[NSString alloc] init];
+        titleLabel = [rootNodeLabel copy];
     }
     return self;
 }
@@ -46,9 +54,9 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	self.navigationController.navigationBarHidden = YES;
-	
+	NSLog(@"View Did Load");
 	// Retrieve data set from plist.
-  [self setDataFromSource];
+    [self setDataFromSource];
 	
 	// Initialize Object for handle current node.
 	self.currentNode = [[NSDictionary alloc] initWithDictionary:[self.datasource objectAtIndex:1]];
@@ -86,7 +94,7 @@
 
 // Insert file name of plist to array.
 - (NSString *)pickUpPlist:(NSIndexPath *)indexPath {
-	NSArray *arrayOfPlist = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", nil];
+	NSArray *arrayOfPlist = [NSArray arrayWithObjects:@"disease-backache", @"disease-flu", @"disease-flu", nil];
 	return [arrayOfPlist objectAtIndex:indexPath.row];
 }
 
@@ -104,22 +112,24 @@
 			// Check whether node type is Decision Node
 			if ([[object valueForKey:@"type"] isEqualToString:@"Decision"]) {
 				self.previousNode = self.currentNode;
-				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
-				[self.pathArray addObject:[self.currentNode copy]];
+				//self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
+                self.currentNode = object;
+				[self.pathArray addObject:self.currentNode];
 			}
 			// End node 
 			else if ([[object valueForKey:@"type"] isEqualToString:@"End"]) {
-				
-				self.quoteField.backgroundColor = [UIColor greenColor];
+				if ([[self.currentNode valueForKey:@"type"] isEqualToString:@"End"]) {
+                    *stop = YES;
+                }
+				self.quoteField.backgroundColor = [UIColor groupTableViewBackgroundColor];
 				self.currentNode = [self.datasource objectAtIndex:[self.datasource indexOfObject:object]];
 				[self.pathArray addObject:self.currentNode];
-				
 			}
 			else {
 				NSLog(@"Node Type is not match. :: %@",[object valueForKey:@"type"]);
 			}
-		}}
-	 ];
+		}
+    }];
 	
 	NSTimeInterval time = [NSDate timeIntervalSinceReferenceDate] - startTime;
 	NSLog(@"Duration : %f ms",time * 10*10*10);
@@ -131,7 +141,7 @@
 	// Node Transition, using Page Curl Up
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.7];
-  [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.quoteField cache:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.quoteField cache:NO];
 	[UIView commitAnimations];
 	
 	// Get CurrentText from traversed node 
@@ -165,7 +175,7 @@
 	// Move to yesNode
 	[self traverseToNodeName:[self getYesNodeTitleFromNode:self.currentNode]];
 	[self refreshView];
-}
+}   
 
 - (IBAction)noAction:(id)sender {
   // Move to noNode
@@ -192,9 +202,8 @@
 }
 
 - (IBAction)showAllState:(id)sender {
-	ShowDiagNodeTree *showAllTree = [[ShowDiagNodeTree alloc] 
-																	 initWithNibName:@"ShowDiagNodeTree" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
-	showAllTree.datasource = self.pathArray;
+	ShowDiagNodeTree *showAllTree = [[ShowDiagNodeTree alloc] initWithNibName:@"ShowDiagNodeTree" bundle:[NSBundle bundleWithIdentifier:@"xib"]];
+	showAllTree.datasource = [self.pathArray copy];
 	[self.navigationController pushViewController:showAllTree animated:YES];
 	
 	[showAllTree release];
@@ -216,13 +225,15 @@
 
 
 - (void)dealloc {
+    [self.datasource release];
 	[titleLabel release];
 	[self.quoteField release];
 	[self.parentNodeLabel release];
-	[self.pathArray release];
 	[self.currentNode release];
-  [self.datasource release];
-  [super dealloc];
+    [self.pathArray release];
+	
+    
+    [super dealloc];
 }
 
 
